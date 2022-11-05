@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myweb
+spec:
+  rules:
+  - host: www.prashantsetup.com
+    http:
+      paths:
+      - path: /search.html
+        pathType: Prefix
+        backend:
+          service:
+            name: search
+            port:
+               number: 80
+      - path: /mail.html
+        pathType: Prefix
+        backend:
+          service:
+            name: mail	
+            port:
+               number: 80

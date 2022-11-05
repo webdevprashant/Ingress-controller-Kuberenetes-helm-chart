@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mail
+  name: mail
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mail
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mail
+    spec:
+      containers:
+      - image: webdevprashant/mynew:v1
+        imagePullPolicy: "Never"
+        name: mynew
