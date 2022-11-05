@@ -19,5 +19,5 @@ spec:
     spec:
       containers:
       - image: webdevprashant/mynew:v2
-        imagePullPolicy: "Never"
+        #imagePullPolicy: "Never"
         name: mynew
